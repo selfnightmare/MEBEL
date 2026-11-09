@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: calc(100% - 64px);
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.header { padding: 24px 0; }
+.header-container, .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+}
+.nav { display: flex; gap: 32px; }
+.nav-link {
+  color: #222;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.hero { padding: 40px 0 80px; }
+.hero-container, .about-container, .workflow-container, .cta-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.hero-container { grid-template-columns: 1fr; align-items: start; }
+.hero-title {
+  margin-bottom: 24px;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+.hero-subtitle, .about-text, .workflow-intro, .step-desc, .review-text {
+  color: #666;
+}
+.hero-subtitle { max-width: 400px; font-size: 15px; }
+.hero-gallery { display: flex; justify-content: space-between; }
+.hero-img-small { width: 35%; }
+.hero-img-large { width: 60%; }
+.hero-gallery img, .project-card img, .cta-image img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+.hero-gallery img { height: 380px; }
+.hero-img-large img { height: 700px; }
+
+.section-title { font-size: 32px; font-weight: 600; line-height: 1.25; }
+.about, .workflow, .projects, .reviews {
+  border-top: 1px solid #e0e0e0;
+  padding: 80px 0;
+}
+.about-text { margin-bottom: 20px; font-size: 15px; }
+.stats { display: flex; gap: 60px; margin-top: 40px; }
+.stat-number {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 28px;
+  font-weight: 600;
+}
+.stat-label { color: #666; font-size: 13px; }
+
+.workflow-header { margin-bottom: 40px; }
+.badge { display: inline-block; margin-right: 8px; font-size: 24px; font-weight: 600; }
+.badge-text { color: #666; font-size: 13px; }
+.workflow-intro { margin-top: 12px; font-size: 14px; }
+.steps-list { display: flex; flex-direction: column; }
+.step-item {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+  padding: 24px 0;
+  border-top: 1px solid #e0e0e0;
+}
+.step-title { font-size: 20px; font-weight: 500; }
+.step-desc { font-size: 14px; line-height: 1.5; }
+
+.projects-title, .reviews-title { margin-bottom: 40px; }
+.projects-grid, .reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.project-card img { height: 420px; }
+.project-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  color: #222;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.review-card {
+  padding: 32px 24px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+.quote-mark { margin-bottom: 16px; font: 36px Georgia, serif; }
+.review-author { margin-bottom: 16px; font-size: 16px; font-weight: 600; }
+.review-text { font-size: 13px; line-height: 1.6; }
+
+.cta { padding: 80px 0; }
+.cta-wrapper { border: 1px solid #e0e0e0; }
+.cta-image img { height: 100%; min-height: 450px; }
+.cta-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
+}
+.cta-title { margin-bottom: 8px; font-size: 28px; font-weight: 500; }
+.cta-subtitle { margin-bottom: 32px; color: #666; font-size: 14px; }
+.cta-form { display: flex; flex-direction: column; gap: 20px; }
+.form-input {
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+}
+.form-input:focus { border-bottom-color: #222; }
+.btn-submit {
+  align-self: flex-start;
+  margin-top: 12px;
+  padding: 14px 24px;
+  border: 0;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+.app-buttons { display: flex; gap: 12px; margin-top: 24px; }
+.app-btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.footer {
+  padding: 40px 0;
+  border-top: 1px solid #e0e0e0;
+  color: #666;
+  font-size: 13px;
+}
+.footer-links a, .footer-socials a {
+  color: #666;
+  text-decoration: none;
+}
+.footer-socials { display: flex; gap: 16px; }
+
+@media (max-width: 768px) {
+  .hero-container, .about-container, .workflow-container, .cta-wrapper,
+  .projects-grid, .reviews-grid, .step-item {
+    grid-template-columns: 1fr;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
